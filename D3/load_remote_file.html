@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+<script type="text/javascript" src="http://127.0.0.1/D3/news.txt"></script>
+</head>
+<body>
+<script>
+function readfile(path){
+	var txtFile = new XMLHttpRequest();
+	txtFile.open("GET", path, true);
+	txtFile.onreadystatechange = function() {
+		if (txtFile.readyState === 4) {  // Makes sure the document is ready to parse.
+			if (txtFile.status === 200) {  // Makes sure it's found the file.
+				allText = txtFile.responseText; 
+				lines = txtFile.responseText.split("\n"); // Will separate each line into an array
+				//print all lines
+				//document.write(allText)
+				//print all lines and add \n
+				document.write(lines)
+			}
+		}
+	}
+	txtFile.send(null);
+}
+
+//Load file from other place
+function loadfile(url) {
+	var txtFile = new XMLHttpRequest();
+	txtFile.onreadystatechange = function(){
+		if (txtFile.readyState == 4 && txtFile.status == 200){
+			_savetosession(txtFile)
+		}
+	}
+	txtFile.open("GET", url, true);
+	txtFile.send();
+}
+//The action for get files
+function _savetosession(xml){
+	xmlDoc = xml.responseText
+	console.log(xmlDoc)
+	document.write(xmlDoc)
+}
+//$.get('http://127.0.0.1/D3/news.txt')
+
+
+alert(data); // hello world
+
+</script>
+</body>
+</html>

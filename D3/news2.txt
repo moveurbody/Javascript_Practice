@@ -1,0 +1,21 @@
+var data="
+A town in Japan is recruiting Ninjas 01:20
+(CNN)Got what it takes to be a ninja assassin?
+
+The Japanese prefecture of Aichi is looking for six fit young ninjas to join its team.
+
+Opportunities for sleek, fast masters of espionage don't come along every day -- but this position offers a year-long contract and 180,000 Japanese Yen ($1,585) a month.
+
+Unusually for this notoriously secretive band of warriors, Aichi is looking for talkative ninjas who enjoy performing on stage.
+
+Japan&#39;s 31 most beautiful places
+31 photos: Most beautiful places in Japan
+
+The recruitment campaign is in fact part of a tourism push for the 2020 Tokyo Olympics.
+
+Local governor Hideaki Omura has appeared online in full ninja costume as part of the bid.
+
+We haven't heard if the hiring process involves mortal combat or just looking really, really good in black.
+
+But Aichi prefecture wants to hear from anyone aged between 18 and 30 and available to start training this April.
+"

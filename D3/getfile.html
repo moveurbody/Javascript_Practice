@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+</head>
+<body>
+<button id="getDifferentDomainDataViaJsonp">get Different Domain Data via jsonp</button>
+<div id="result"></div>
+
+
+<script>
+//從不同的 domain 拿資料 ( Server 端需使用 jsonp 格式)
+$("#getDifferentDomainDataViaJsonp").click(function(){
+    ajaxCallJsonp("http://127.0.0.1/D3/news.txt");
+});
+
+function ajaxCallJsonp(target){
+    
+    var data = $.getJSON(target,
+    {
+        tags: "mount rainier",
+        tagmode: "any",
+        format: "json"
+    });
+
+    //成功得到資料
+    data.success(function( msg ) {
+        $.each(msg.items, function(i,item){
+
+              //empty content
+              $("#result").html();
+
+
+              $("#result").append($("<img/>").attr("src", item.media.m));
+              
+              if ( i == 3 ) {
+                  return false;
+              }
+        });
+    });
+
+    //取得資料失敗
+    data.error(function( msg ) {
+        $("#result").html("fail getting data");
+    });
+
+}
+</script>
+
+</body>
+</html>

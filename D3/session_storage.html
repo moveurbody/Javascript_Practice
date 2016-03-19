@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Page Title</title>
+
+</head>
+<body>
+	<input type='text' id='temp'>
+	<button type="button" id="open" onclick="Storage()">open</button>
+	<script>
+	//localStorage:只要不去清除，那麼只要是在同一個瀏覽器就算新開一個tab也都可以再把資料取回來  
+	//SessionStorage:只要關閉瀏覽器或者新開一個tab生命週期就結束了，也就無法取得資料了
+	function Storage(){
+		//windows.sessionStorage['save'] 跟 window.sessionStorage.save是同樣的
+		//只是宣告的方式不同
+		window.sessionStorage.apple = document.getElementById('temp').value;
+		document.write(window.sessionStorage.apple)
+		window.sessionStorage.clear()
+	}
+</script>
+</body>
+</html>
